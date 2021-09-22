@@ -1,0 +1,8 @@
+### Main Points 
+*  When implementing the constructor for a React.Component subclass, you should call super(props) before any other statement. Otherwise, this.props will be undefined in the constructor, which can lead to bugs.
+* All child in the list should have a unique Key prop the key prop boosts the performance y not rendering allchildren over and over again it will help to render only the new childrens
+* When react DOM rendered it have two two virtual DOM old vertitual DOM and and re-rendered virtual DOM when some changes happened it compares the difference between old virtual DOM and  re-rendered virtual DOM so that is there is a change between them it renders it to the real DOM not did not renders the whole DOM only updates new one
+### Immutable
+* immutable is never directly mutates given data ,it always needa to make another copy of it 
+### Reconcilation Process of React
+* all react Dom start from the base unit called node or root when you render a React application ,a tree of node that descibes the applications is generated and saved in memeory by the set of render methods and the tree is flushed to the rendering enviroment. Rendere enviroment draws the whole DOM tree on the first loading of the website and then the user can finally see the first result of all DOM manipulations .When we do some changes new tree called work-in-progress is built. Then we compare working-in-progress with the old trees and it will calculate the differences between them and the differences of the trees is fluched to the rendering envoiroment  and then the process of converting the difference into a set of DOM operations this resulted to update the real DOM the working-in-progress will be the old tree and so on ... this is called Reconciliation process
